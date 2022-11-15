@@ -1,9 +1,8 @@
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
-from news.views import index
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('news/', index),
+    path('', include('news.urls')),
 ]
